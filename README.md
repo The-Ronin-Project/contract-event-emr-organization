@@ -1,26 +1,9 @@
-# Event Contract Template
+# EMR Organization
 
 # Scope
-Describe what types of data are included in this schema and how they should be interpreted. This description is valuable to get alignment between the Producers and Consumers about what we intend to message. 
+This is the representation of some sort of organization understood by the EMR. This is derived from the RoninOrganization resource in the Ronin Common Data Model as defined [here](https://supreme-garbanzo-99254d0f.pages.github.io/ig/Ronin-Implementation-Guide-Home-List-Profiles-Ronin-Organization.html).
 
-# Initial Setup
 
-## Example Directory Structure
-```
-<schema_repo_root>/
-|- .github/workflows/cicd.yaml              # Simple Github Actions workflow that leverages a 
-|                                           # shared workflow for all event contracts
-|- .gitignore                               # Exclude the docs and build directories
-|- README.md                                # This file
-|- Makefile                                 # Simple makefile for test/clean/doc. Uses a docker 
-|                                           # image for the logic. See link below
-|- v1/                                      # Directory for each major version
-  |- <schema_name>-v1.schema.json           # The contract schema
-  |- examples/
-  |- <example_name>.json                  # example payloads that conforms to the schema
-  |- docs/                                  # Generated documentation from the schema 
-```
-**This can be removed when you have actual files. This is defined here to assit the initial author.**
 
 ## Boilerplate to update
 - [ ] Choose the name of the contract. This should be the suffix of the topic name minus the version. This is based on the naming strategy defined in the [Events Topic Standard](https://projectronin.atlassian.net/wiki/spaces/ENG/pages/1765998701/Event+Topic+Standards). Example: `emr-patient`

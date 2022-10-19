@@ -1,0 +1,67 @@
+{
+  "create": {
+    "id": "h387afy7-4CEC-A5CF-DD8135201C4A",
+    "fhirId": "4CEC-A5CF-DD8135201C4A",
+    "tenantId": "h387afy7",
+    "resourceVersion": "2022090912432146",
+    "identifier": [
+      {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "1407071236"
+      }
+      ],
+      "active": true,
+      "type": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+              "code": "prov",
+              "display": "Healthcare Provider"
+          }
+        ]
+      }
+    ],
+    "name": "Acme Clinic",
+    "alias": ["Wiley Coyote Urgent Care"],
+    "telecom": [
+      {
+        "system": "phone",
+        "originalSystem": {
+          "system": "http://telecomSystem/localCodeSystem",
+          "code": "phone"
+        },
+        "value": "(+1) 734-677-7777"
+      },
+      {
+        "system": "email",
+        "originalSystem": {
+          "system": "http://telecomUse/localCodeSystem",
+          "code": "e-mail"
+        },
+        "value": "customer-service@acme-clinic.org"
+      }
+    ],
+    "address": [
+      {
+        "line":  [
+          "3300 Washtenaw Avenue, Suite 227"
+        ],
+        "city": "Amherst",
+        "state": "MA",
+        "postalCode": "01002",
+        "country": "USA"
+      }
+    ],
+    "partOf": {
+      "resource": {
+        "type": "Organization",
+        "id": "h387afy7-4DFA-B098-81741B8418E6"
+      },
+      "reference": "Organizaiton/h387afy7-4DFA-B098-81741B8418E6",
+      "display": "Warner Bros. Hospital Systems"
+    },
+    "createdAt": "2022-09-29T16:18:55Z",
+    "updatedAt": "2022-09-29T16:18:55Z"
+  }
+}
