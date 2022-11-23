@@ -26,7 +26,7 @@
           "format": "date-time"
         }
       },
-      "description": "This represents an event when a new Organization is deleted"
+      "description": "This represents an event when a new Organization is deleted",
       "required": ["id", "tenantId", "deletedAt"]
     }
   },
@@ -59,10 +59,6 @@
       "properties": {
         "emrText": {
           "type": "string"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
         },
         "coding": {
           "type": "array",
@@ -342,36 +338,45 @@
           }
         },
         "partOf": {
-          "$ref": "#/$defs/resourceReference",
-          "description": "The Organization that this Organization is a part of. "
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/resourceReference",
+            "description": "The Organization that this Organization is a part of. "
+          }
         },
         "contact": {
-          "type": "object",
-          "description": "Contact at the organization for a specific purpose",
-          "properties": {
-            "purpose": {
-              "$ref": "#/$defs/codeableConcept",
-              "description": "The type of contact"
-            },
-            "name": {
-              "$ref": "#/$defs/humanName",
-              "description": "A Name associated with the contact"
-            },
-            "telecom": {
-              "type": "array",
-              "items": {
-                "$ref": "#/$defs/contactPoint"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "Contact at the organization for a specific purpose",
+            "properties": {
+              "purpose": {
+                "$ref": "#/$defs/codeableConcept",
+                "description": "The type of contact"
+              },
+              "name": {
+                "$ref": "#/$defs/humanName",
+                "description": "A Name associated with the contact"
+              },
+              "telecom": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/contactPoint"
+                }
+              },
+              "address": {
+                "$ref": "#/$defs/address",
+                "description": "Visiting or postal address for the contact"
               }
-            },
-            "address": {
-              "$ref": "#/$defs/address",
-              "description": "Visiting or postal address for the contact"
             }
           }
         },
         "endpoint": {
-          "$ref": "#/$defs/resourceReference",
-          "description": "Technical endpoint providing access to services provided by the Organization"
+          "type": "array",
+          "items": {
+            "description": "Technical endpoint providing access to services provided by the Organization",
+            "$ref": "#/$defs/resourceReference"
+          }
         },
         "createdAt": {
           "type": "string",

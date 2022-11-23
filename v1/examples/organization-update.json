@@ -53,14 +53,16 @@
         "country": "USA"
       }
     ],
-    "partOf": {
-      "resource": {
-        "type": "Organization",
-        "id": "h387afy7-4DFA-B098-81741B8418E6"
-      },
-      "reference": "Organizaiton/h387afy7-4DFA-B098-81741B8418E6",
-      "display": "Warner Bros. Hospital Systems"
-    },
+    "partOf": [
+      {
+        "resource": {
+          "type": "Organization",
+          "id": "h387afy7-4DFA-B098-81741B8418E6"
+        },
+        "reference": "Organizaiton/h387afy7-4DFA-B098-81741B8418E6",
+        "display": "Warner Bros. Hospital Systems"
+      }
+    ],
     "createdAt": "2022-09-29T16:18:55Z",
     "updatedAt": "2022-09-29T16:18:55Z"
   }
